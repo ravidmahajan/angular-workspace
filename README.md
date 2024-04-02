@@ -80,10 +80,58 @@ The Angular CLI supports various other commands for development, testing, and de
 
 For a comprehensive list of commands, refer to the [Angular CLI documentation](https://angular.io/cli).
 
+## Bootstrap commands
+
+npm install bootstrap --save
+
+npm install bootstrap-icons --save
+
+# import bootstrap in styles.css
+
+@import "../../../node_modules/bootstrap/dist/css/bootstrap.css";
+@import "../../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
 ## Conclusion
 
 This README provides a basic overview of creating and managing an Angular workspace and applications. By following the outlined steps, you can set up a development environment ready for building scalable web applications with Angular.
 
 
+==============================================================================================
+# Angular Bootstrapping Process:
+
+In most Angular applications, the bootstrapping process (the process of starting up the Angular application) is handled by the platformBrowserDynamic function for just-in-time (JIT) compilation, or by Angular CLI automatically behind the scenes for ahead-of-time (AOT) compilation. The standard way to bootstrap an application in a development environment looks something like this:
+
+## For JIT Compilation (Development):
+
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { AppModule } from './app/app.module';
+
+platformBrowserDynamic().bootstrapModule(AppModule)
+  .catch(err => console.error(err));
+This code is usually found in the main.ts file of an Angular project.
+
+## Angular Standalone Components and bootstrapApplication Method
+With the introduction of Angular Standalone Components in later versions (Angular version 14 and beyond), there's a new way to bootstrap applications that don't rely on Angular modules (NgModule). This is where bootstrapApplication comes into play. It is used to bootstrap applications that use standalone components or when initiating an application in a more granular and potentially more performance-optimized way. The usage, however, is slightly different from what you've shown:
+
+import { bootstrapApplication } from '@angular/platform-browser';
+import { AppComponent } from './app/app.component';
+
+bootstrapApplication(AppComponent)
+  .catch(err => console.error(err));
+Here, AppComponent is expected to be a standalone component or a component with direct references to all dependencies it needs without the use of an NgModule.
+
+## Addressing Your Code
+Misuse of bootstrapApplication: Your attempt to bootstrap the AppModule with bootstrapApplication is incorrect based on Angular's standard practices. bootstrapApplication is designed for components, not modules.
+
+## Commented Code: 
+The commented-out code attempting to bootstrap AppComponent is closer to the correct use of bootstrapApplication, but it lacks context on whether AppComponent is set up as a standalone component.
+
+## Configuration Object: 
+
+Passing appConfig directly to bootstrapApplication or platformBrowserDynamic().bootstrapModule is not standard. Usually, configuration would be handled within the component or module, or through Angular's environment files.
+
+## Conclusion
+If you're working with Angular modules (which include AppModule), use platformBrowserDynamic().bootstrapModule.
+If you're experimenting with standalone components in Angular version 14 or later, you can use bootstrapApplication but ensure your starting point is a component, not a module.
 
 
