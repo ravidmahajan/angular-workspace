@@ -1,5 +1,7 @@
 import {Component} from '@angular/core';
 
+// Inline documentation
+
 @Component({
     selector: 'app-register',
     template: `
