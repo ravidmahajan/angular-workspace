@@ -4,7 +4,7 @@ import {Component} from '@angular/core';
     selector: 'app-register',
     template: `
     <div class="register-container bg-dark text-white">
-        <div class="input-group">
+        <div>
             <p>Ready to watch? Enter your email to create or restart your membership.</p>
             <div class="input-group input-group-lg">
                 <input type="email" class="form-control" placeholder="Email address">
@@ -20,7 +20,7 @@ import {Component} from '@angular/core';
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 600px;
+      height: 400px;
     }
   `]
 })
