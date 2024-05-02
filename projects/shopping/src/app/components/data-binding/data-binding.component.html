@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <h3>Hello! <span>{{username}}</span></h3>
+
+    <h2>One way binding</h2>
+    <input type="text" value="{{username}}">
+    <p>Hello! <span>{{username}}</span></p>
+
+    <h2>Interpolation</h2>
+    <dl>
+        <dt>Stock</dt>
+        <dd>
+            <input type="checkbox" checked="{{Stock}}"> Available 
+        </dd>
+    </dl>
+
+    <h2>Property Binding</h2>
+    <dl>
+        <dt>Stock</dt>
+        <dd>
+            <input type="checkbox" [checked]="Stock"> {{Stock? "Available": "Out of Stock"}}
+        </dd>
+        <dt>Name</dt>
+        <dd><input type="text" [value]="username"></dd> 
+    </dl>
+
+    <h2>Attribute Binding</h2>
+    <table border="1" [width]="tWidth" [attr.height]="tHeight">
+        <tr>
+            <td>Name</td>
+        </tr>
+    </table>
+</div>
