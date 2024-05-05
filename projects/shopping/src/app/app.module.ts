@@ -10,6 +10,7 @@ import { NetflixRegisterComponent } from './Netflix/netflix-register/netflix-reg
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
 import { DataBindingMVVMComponent } from './components/data-binding/data-binding.component-copy';
+import { FakestoreComponent } from './components/fakestore/fakestore.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { DataBindingMVVMComponent } from './components/data-binding/data-binding
   // bootstrap: [LoginComponent],
   // bootstrap: [NetflixIndexComponent],
   // bootstrap: [DataBindingComponent],
-  bootstrap: [DataBindingMVVMComponent],
+  // bootstrap: [DataBindingMVVMComponent],
+  bootstrap: [FakestoreComponent],
   schemas: []
 })
 export class AppModule { }
