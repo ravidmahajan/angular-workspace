@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+        
+        // function bodyonload(){
+        //    var button = document.createElement("button");
+        //    button.innerHTML = "Register";
+        //    document.querySelector("div").appendChild(button);
+        // }
+
+        function bodyload(){
+        var categories = ["All", "Electronics", "Footwear"];
+        for(var item of categories){
+            var option = document.createElement("option");
+            option.text = item;
+            option.value=item;
+            document.querySelector("select").appendChild(option);
+        }
+    }
+</script>
+  </head>
+  <body onload="bodyload()">
+    <h2>Elements</h2>
+      <div>
+        <select></select>
+      </div>
+  </body>
+</html>
