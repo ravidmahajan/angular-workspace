@@ -1,0 +1,56 @@
+<div class="container-fluid">
+    <div class="row mt-4">
+        <div class="col-2">
+            <div class="btn-group-vertical">
+                <button (click)="ViewClick('BasicDetails')" class="btn btn-primary w-100 mb-2">Basic Details</button>
+                <button (click)="ViewClick('Preview')" class="btn btn-primary w-100 mb-2">Preview</button>
+                <button (click)="ViewClick('Offers')" class="btn btn-primary w-100 mb-2">Offers</button>
+            </div>
+
+            <div class="mt-4">
+                <select  [(ngModel)]="ViewName" class="form-select">
+                    <option value="Info">Select Info</option>
+                    <option value="BasicDetails">Basic Details</option>
+                    <option value="Preview">Preview</option>
+                    <option value="Offers">Offers</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-10">
+            <div [ngSwitch]="ViewName">
+                <div>
+                    <div *ngSwitchCase="'BasicDetails'">
+                    <h4>Apple iPhone 15 (Black, 128 GB)</h4>
+                    <div>
+                        <span class="bg-success text-white p-2 rounded rounded-2"><span
+                                class="bi bi-star-fill text-white"></span> 4.6 </span>
+                        <span class="ms-4" style="color: grey;">30,018 Ratings & 1,827 Reviews</span>
+                        <div class="mt-2">
+                            <h2>₹71,999 </h2><span><del>₹79,900</del></span> <b class="ms-3"><span>9% off</span></b>
+                        </div>
+                    </div>
+                </div>
+                    <div *ngSwitchCase="'Preview'">
+                        <img src="../../../assets/view1.png" width="300" height="400">
+                    </div>
+                    <div *ngSwitchCase="'Offers'">
+                        <h3>Available offers</h3>
+                        <ul class="list-unstyled">
+                            <li><span class="bi bi-tag-fill text-success"></span>Bank OfferGet ₹25 instant discount on
+                                first Flipkart UPI txns on order of ₹250 and aboveT&C</li>
+                            <li><span class="bi bi-tag-fill text-success"></span>Bank OfferGet ₹25 instant discount on
+                                first Flipkart UPI txns on order of ₹250 and aboveT&C</li>
+                            <li><span class="bi bi-tag-fill text-success"></span>Bank OfferGet ₹25 instant discount on
+                                first Flipkart UPI txns on order of ₹250 and aboveT&C</li>
+                            <li><span class="bi bi-tag-fill text-success"></span>Bank OfferGet ₹25 instant discount on
+                                first Flipkart UPI txns on order of ₹250 and aboveT&C</li>
+                        </ul>
+                    </div>
+                    <div *ngSwitchDefault>
+                        <h4>Please select a View</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

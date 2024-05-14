@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+        function bodyload(){
+        var categories = ["All", "Electronics", "Footwear"];
+        for(var item of categories){
+            var li = document.createElement("li");
+            li.innerHTML = item;
+            document.querySelector("ol").appendChild(li);
+        }
+    }
+</script>
+  </head>
+  <body onload="bodyload()">
+    <h2>Elements</h2>
+      <div>
+        <ol>
+
+        </ol>
+      </div>
+  </body>
+</html>

@@ -11,6 +11,10 @@ import { DataBindingComponent } from './components/data-binding/data-binding.com
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DataBindingMVVMComponent } from './components/data-binding/data-binding.component-copy';
 import { FakestoreComponent } from './components/fakestore/fakestore.component';
+import { ContentProjectionComponent } from './components/content-projection/content-projection.component';
+import { MobileDetailsComponent } from './components/mobile-details/mobile-details.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { ForDemoComponent } from './components/for-demo/for-demo.component';
 
 
 @NgModule({
@@ -23,7 +27,11 @@ import { FakestoreComponent } from './components/fakestore/fakestore.component';
     NetflixRegisterComponent,
     DataBindingComponent,
     DataBindingMVVMComponent,
-    FakestoreComponent
+    FakestoreComponent,
+    ContentProjectionComponent,
+    MobileDetailsComponent,
+    ProductDetailsComponent,
+    ForDemoComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +44,11 @@ import { FakestoreComponent } from './components/fakestore/fakestore.component';
   // bootstrap: [NetflixIndexComponent],
   // bootstrap: [DataBindingComponent],
   // bootstrap: [DataBindingMVVMComponent],
-  bootstrap: [FakestoreComponent],
+  // bootstrap: [FakestoreComponent],
+  // bootstrap: [ContentProjectionComponent],
+  // bootstrap: [MobileDetailsComponent],
+  // bootstrap: [ProductDetailsComponent],
+  bootstrap: [ForDemoComponent],
   schemas: []
 })
 export class AppModule { }
