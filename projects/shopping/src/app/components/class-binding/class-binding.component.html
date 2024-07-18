@@ -1,0 +1,67 @@
+<div class="container-fluid">
+    <h2>Class Binding</h2>
+    <ul class="list-unstyled">
+        <li><input ngModel #border="ngModel" type="checkbox">Border</li>
+        <li><input ngModel #background="ngModel" type="checkbox">Background</li>
+        <li><input ngModel #text="ngModel" type="checkbox">Text Effect</li>
+    </ul>
+    <h1 [ngClass]="'bg-style'">Sample Text</h1>
+    <h1 [ngClass]="['bg-style','border-style','text-style']">Sample Text</h1>
+    <h1 [ngClass]="{'bg-style': false,'border-style': true,'text-style': true}">Sample Text</h1>
+
+    <h1 [ngClass]="{'bg-style': background.value,'border-style': border.value,'text-style': text.value}">Sample Text</h1>
+</div>
+
+
+<div class="container-fluid d-flex justify-content-center align-items-center" style="height: 400px;">
+    <div>
+        <div class="form-switch">
+            <input type="checkbox" ngModel #darkTheme="ngModel" class="form-check-input"><label class="form-check-label">Dark Theme</label>
+        </div>
+        <form class="border border-2 p-2" [ngClass]="{'dark-theme': darkTheme.value}">
+            <!-- {{darkTheme.value}} -->
+            <h2><span class="bi bi-person-fill"></span>User Login</h2>
+            <dl>
+                <dt>Username</dt>
+                <dd><input type="text" required minlength="4" ngModel #UserName="ngModel" class="form-control" name="UserName" [ngClass]="{'bg-danger': UserName.invalid}"></dd>
+                <dt>Password</dt>
+                <dd><input type="password" ngModel #Password="ngModel" class="form-control"></dd>
+            </dl>
+            <button class="btn btn-dark w-100">Login</button>
+        </form>
+    </div>
+</div>
+
+<h2>Style binding</h2>
+<div class="container">
+    <dl>
+        <dt>Background</dt>
+        <dd>
+            <select [(ngModel)]="bgStyle">
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+            </select>
+        </dd>
+        <dt>Text Color</dt>
+        <dd>
+            <select [(ngModel)]="textStyle">
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+            </select>
+        </dd>
+        <dt>Font size</dt>
+        <dd>
+           1px <input [(ngModel)]="fontSize" (change)="ApplyFontSize()" type="range" min="1" max="50" value="1"> 50px
+        </dd>
+        <dt>Padding</dt>
+        <dd>
+           1px <input [(ngModel)]="padding" type="range" min="1" max="50" value="1"> 50px
+        </dd>
+        <dd><button class="btn btn-primary" (click)="ApplyClick()">Apply</button></dd>
+    </dl>
+    <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 400px;">
+        <h1 [ngStyle]="styleObject">Welcome to Angular</h1>
+    </div>
+</div>

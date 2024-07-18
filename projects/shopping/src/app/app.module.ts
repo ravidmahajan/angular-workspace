@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
+import { CommonModule } from '@angular/common';
 // import { NetflixRegisterComponent } from './components/netflix-register.component';
 import { LoginComponent } from './components/login/login.component';
 import { NetflixIndexComponent } from './Netflix/netflix-index/netflix-index.component';
@@ -15,6 +16,8 @@ import { ContentProjectionComponent } from './components/content-projection/cont
 import { MobileDetailsComponent } from './components/mobile-details/mobile-details.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { ForDemoComponent } from './components/for-demo/for-demo.component';
+import { ShopperTemplateComponent } from './components/shopper-template/shopper-template.component';
+import { ClassBindingComponent } from './components/class-binding/class-binding.component';
 
 
 @NgModule({
@@ -31,12 +34,15 @@ import { ForDemoComponent } from './components/for-demo/for-demo.component';
     ContentProjectionComponent,
     MobileDetailsComponent,
     ProductDetailsComponent,
-    ForDemoComponent
+    ForDemoComponent,
+    ShopperTemplateComponent,
+    ClassBindingComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule,
+    CommonModule
   ],
   providers: [],
   // bootstrap: [NetflixRegisterComponent],
@@ -48,7 +54,9 @@ import { ForDemoComponent } from './components/for-demo/for-demo.component';
   // bootstrap: [ContentProjectionComponent],
   // bootstrap: [MobileDetailsComponent],
   // bootstrap: [ProductDetailsComponent],
-  bootstrap: [ForDemoComponent],
+  // bootstrap: [ForDemoComponent],
+  // bootstrap: [ShopperTemplateComponent],
+  bootstrap: [ClassBindingComponent],
   schemas: []
 })
 export class AppModule { }
