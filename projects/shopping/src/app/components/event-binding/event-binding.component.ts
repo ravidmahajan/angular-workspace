@@ -56,4 +56,37 @@ export class EventBindingComponent {
       top: e.clientY + "px"
     }
   }
+
+  public users: any[] = [
+    {UserName: 'john'},
+    {UserName: 'john12'},
+    {UserName: 'john_nit'},
+    {UserName: 'david'}
+  ]
+
+  public userError = '';
+  public isInvalid: boolean = false;
+
+  public isPwdWarnVisible = false;
+
+  public VerifyUser(e: any) {
+    for(var user of this.users){
+      if(user.UserName == e.target.value){
+        this.userError = 'UserName is taken - Try Another';
+        this.isInvalid = true;
+      } else {
+        this.userError = 'UserName Available'
+        this.isInvalid = false;
+      }
+    }
+  }
+
+  public VerifyPassword(e: any) {
+    if(e.keyCode >=65 && e.keyCode <=90) {
+      this.isPwdWarnVisible = true;
+    } else {
+      this.isPwdWarnVisible = false;
+    }
+  }
+
 }
