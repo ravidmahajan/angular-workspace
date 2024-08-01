@@ -25,12 +25,13 @@
 <h2>Register user</h2>
 <dl>
     <dt>User Name</dt>
-    <dd><input type="text" (keyup)="VerifyUser($event)"></dd>
+    <dd><input type="text" (keyup)="VerifyUser($event)"  (blur)="VerifyRequired($event)"></dd>
     <dd [ngClass]="{'text-danger': isInvalid, 'text-success': true}">{{userError}}</dd>
     <dt>Password</dt>
-    <dd><input type="password" (keypress)="VerifyPassword($event)"></dd>
+    <dd><input type="password" (keypress)="VerifyPassword($event)" (focus)="PasswordFocus()" (focus)="PasswordBlur()"></dd>
     <dd class="text-warning" *ngIf="isPwdWarnVisible">
         <span class="bi bi-exclamation-triangle-fill"></span> CAPS ON
     </dd>
+    <dd>{{pwdError}}</dd>
 </dl>
 </div>

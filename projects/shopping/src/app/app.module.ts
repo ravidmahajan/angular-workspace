@@ -19,6 +19,7 @@ import { ForDemoComponent } from './components/for-demo/for-demo.component';
 import { ShopperTemplateComponent } from './components/shopper-template/shopper-template.component';
 import { ClassBindingComponent } from './components/class-binding/class-binding.component';
 import { EventBindingComponent } from './components/event-binding/event-binding.component';
+import { EmiComponent } from './components/emi/emi.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { EventBindingComponent } from './components/event-binding/event-binding.
     ForDemoComponent,
     ShopperTemplateComponent,
     ClassBindingComponent,
-    EventBindingComponent
+    EventBindingComponent,
+    EmiComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +61,8 @@ import { EventBindingComponent } from './components/event-binding/event-binding.
   // bootstrap: [ForDemoComponent],
   // bootstrap: [ShopperTemplateComponent],
   // bootstrap: [ClassBindingComponent],
-  bootstrap: [EventBindingComponent],
+  // bootstrap: [EventBindingComponent],
+  bootstrap: [EmiComponent],
   schemas: []
 })
 export class AppModule { }

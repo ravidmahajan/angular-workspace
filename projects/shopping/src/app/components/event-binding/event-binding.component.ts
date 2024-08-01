@@ -66,8 +66,8 @@ export class EventBindingComponent {
 
   public userError = '';
   public isInvalid: boolean = false;
-
-  public isPwdWarnVisible = false;
+  public pwdError: string = '';
+  public isPwdWarnVisible: boolean = false;
 
   public VerifyUser(e: any) {
     for(var user of this.users){
@@ -87,6 +87,23 @@ export class EventBindingComponent {
     } else {
       this.isPwdWarnVisible = false;
     }
+  }
+
+  public VerifyRequired(e: any){
+    if(e.target.value == ''){
+      this.userError = 'Required Field';
+      this.isInvalid = true;
+    } else {
+      this.userError = '';
+    }
+  }
+
+  public PasswordFocus(){
+    this.pwdError = 'Caps Not Allowed';
+  }
+
+  public PasswordBlur(){
+    this.pwdError = '';
   }
 
 }
