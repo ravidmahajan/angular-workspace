@@ -18,11 +18,11 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 import { ForDemoComponent } from './components/for-demo/for-demo.component';
 import { ShopperTemplateComponent } from './components/shopper-template/shopper-template.component';
 import { ClassBindingComponent } from './components/class-binding/class-binding.component';
-<<<<<<< HEAD
 import { EventBindingComponent } from './components/event-binding/event-binding.component';
 import { EmiComponent } from './components/emi/emi.component';
-=======
->>>>>>> parent of aba494c (keyboard events)
+import { BmiComponent } from './components/bmi/bmi.component';
+import { ParentComponent } from './components/parent/parent.component';
+import { ChildComponent } from './components/child/child.component';
 
 
 @NgModule({
@@ -41,13 +41,13 @@ import { EmiComponent } from './components/emi/emi.component';
     ProductDetailsComponent,
     ForDemoComponent,
     ShopperTemplateComponent,
-<<<<<<< HEAD
     ClassBindingComponent,
     EventBindingComponent,
-    EmiComponent
-=======
-    ClassBindingComponent
->>>>>>> parent of aba494c (keyboard events)
+    EmiComponent,
+    ClassBindingComponent,
+    BmiComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
@@ -67,13 +67,12 @@ import { EmiComponent } from './components/emi/emi.component';
   // bootstrap: [ProductDetailsComponent],
   // bootstrap: [ForDemoComponent],
   // bootstrap: [ShopperTemplateComponent],
-<<<<<<< HEAD
   // bootstrap: [ClassBindingComponent],
   // bootstrap: [EventBindingComponent],
-  bootstrap: [EmiComponent],
-=======
-  bootstrap: [ClassBindingComponent],
->>>>>>> parent of aba494c (keyboard events)
+  // bootstrap: [EmiComponent],
+  // bootstrap: [ClassBindingComponent],
+  // bootstrap: [BmiComponent],
+  bootstrap: [ParentComponent, ChildComponent],
   schemas: []
 })
 export class AppModule { }

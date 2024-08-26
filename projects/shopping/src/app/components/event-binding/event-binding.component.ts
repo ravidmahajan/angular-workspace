@@ -56,7 +56,6 @@ export class EventBindingComponent {
       top: e.clientY + "px"
     }
   }
-<<<<<<< HEAD
 
   public users: any[] = [
     {UserName: 'john'},
@@ -107,6 +106,4 @@ export class EventBindingComponent {
     this.pwdError = '';
   }
 
-=======
->>>>>>> parent of aba494c (keyboard events)
 }
