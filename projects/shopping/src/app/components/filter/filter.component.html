@@ -1,0 +1,11 @@
+<h3>Filter Products</h3>
+<ul class="list-unstyled">
+    <li class="d-flex justify-content-between mb-2"><span><input type="radio" value="all" (change)="SendCategoryName($event)" class="form-check-input" name="category"> All</span> <span class="badge bg-primary">{{AllCount}}</span></li>
+    <li class="d-flex justify-content-between mb-2"><span><input type="radio" value="electronics" (change)="SendCategoryName($event)"   class="form-check-input" name="category"> Electronics</span> <span class="badge bg-primary">{{ElectronicsCount}}</span></li>
+    <li class="d-flex justify-content-between mb-2"><span> <input type="radio" value="jewelery" (change)="SendCategoryName($event)"
+        class="form-check-input" name="category"> Jewellery</span><span class="badge bg-primary">{{JeweleryCount}}</span></li>
+    <li class="d-flex justify-content-between mb-2"><span> <input type="radio" value="men's clothing" (change)="SendCategoryName($event)"
+        class="form-check-input" name="category"> Men's Clothing</span><span class="badge bg-primary">{{MensClothingCount}}</span></li>
+    <li class="d-flex justify-content-between mb-2"><span> <input type="radio" value="women's clothing" (change)="SendCategoryName($event)"
+        class="form-check-input" name="category"> Women's Clothing</span> <span class="badge bg-primary">{{WomensClothingCount}}</span></li>
+</ul>
